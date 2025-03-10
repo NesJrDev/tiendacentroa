@@ -59,14 +59,7 @@
                 const hamburgerMenu = document.querySelector('#hamburger-menu');
                 const menucell = document.querySelector('.cellphoneNav-bar');
                 hamburgerMenu.addEventListener("click", function() {
-                    menucell.classList.toggle("active");
-                    if (menucell.classList.contains("active")) {
-                        menucell.style.display = "flex";
-                        menucell.style.top = "70px";
-                        menucell.style.transition = "top 0.5s ease-in-out";
-                    } else {
-                        menucell.style.display = "none";
-                    }
+                    menucell.classList.toggle("activeheader");
                 });
             })
             .catch(error => document.getElementById('header-container').innerHTML = 'Loading');

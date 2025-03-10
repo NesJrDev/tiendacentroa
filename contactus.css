@@ -1,4 +1,6 @@
 /* body */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
 body {
     margin: 0;
     padding: 0;
@@ -14,6 +16,11 @@ body {
     align-items: center;
     background: white;
     position: fixed;
+}
+
+#hamburger-menu {
+    width: 45px;
+    display: none;
 }
 
 header {
@@ -73,12 +80,19 @@ header img {
     background: white;
     width: 100%;
     height: 160px;
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: start;
-    padding: 25px;
+    padding: 15px;
     transition: all 0.5s ease-in-out;
+}
+.cellphoneNav-bar a {
+    text-decoration: none;
+    color: #000;
+}
+.activeheader {
+    top: 100px;
 }
 
 /* EspacioMenu */
@@ -103,14 +117,11 @@ header img {
 
 /* Form part */
 .form-container {
-    display: flex
-;
+    display: flex;
     justify-content: center;
     align-items: start;
     background-color: #e0f4f4;
-    padding: 60px 20px 90px 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 65px 0 65px 0;
     width: 100%;
 }
 .fullcontainer {
@@ -245,6 +256,16 @@ header img {
 .lilicons img{
     width: 100px;
 }
+/* header */
+@media (max-width: 768px) {
+    .nav-bar {
+        display: none;
+    }
+    #hamburger-menu {
+        display: block;
+    }
+}
+
 @media (max-width: 768px) {
     .socialmediaicons {
         display: flex;
@@ -275,6 +296,14 @@ header img {
     flex-direction: column;
     margin-top: 20px;
     color: #ffff;
+}
+@media (max-width: 768px) {
+    .nav-bar {
+        display: none;
+    }
+    #hamburger-menu {
+        display: block;
+    }
 }
 
 

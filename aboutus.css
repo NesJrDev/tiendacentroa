@@ -1,4 +1,6 @@
 /* body */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
 body {
     margin: 0;
     padding: 0;
@@ -14,6 +16,10 @@ body {
     align-items: center;
     background: white;
     position: fixed;
+}
+#hamburger-menu {
+    width: 45px;
+    display: none;
 }
 header {
     color: rgb(0, 0, 0);
@@ -72,12 +78,19 @@ header img {
     background: white;
     width: 100%;
     height: 160px;
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: start;
-    padding: 25px;
+    padding: 15px;
     transition: all 0.5s ease-in-out;
+}
+.cellphoneNav-bar a {
+    text-decoration: none;
+    color: #000;
+}
+.activeheader {
+    top: 100px;
 }
 
 /* EspacioMenu */
@@ -118,13 +131,22 @@ header img {
     justify-content: center;
 }
 .pordata div {
-    width: 2300px;
+    width: 100%;
+    max-width: 1900px;
+    font-size: 25px;
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
     color: #fff;
-    font-size: 20px;
 }
 .pordata div h1 {
-    width: 100%;
+    width: 90%;
     max-width: 700px;
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
 }
 
 /* textContainer */
@@ -273,7 +295,18 @@ header img {
     color: #ffff;
 }
 
-
+/* header */
+@media (max-width: 768px) {
+    .nav-bar {
+        display: none;
+    }
+    #hamburger-menu {
+        display: block;
+    }
+    .pordata div {
+        font-size: 15px;
+    }
+}
 /* Header media */
 @media (max-width:689px) {
     header img {
@@ -296,5 +329,12 @@ header img {
     }
     .textandlogo img {
         height: fit-content;
+    }
+}
+@media (max-width: 330px) {
+    .picturePortada {
+        height: 300px;
+        font-size: 13px;
+        text-align: center;
     }
 }

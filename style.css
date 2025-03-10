@@ -15,7 +15,10 @@ body {
     background: white;
     position: fixed;
 }
-
+#hamburger-menu {
+    width: 45px;
+    display: none;
+}
 header {
     color: rgb(0, 0, 0);
     padding: 10px 0;
@@ -87,14 +90,20 @@ header img {
     background: white;
     width: 100%;
     height: 160px;
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: start;
-    padding: 25px;
+    padding: 15px;
     transition: all 0.5s ease-in-out;
 }
-
+.cellphoneNav-bar a {
+    text-decoration: none;
+    color: #000;
+}
+.activeheader {
+    top: 100px;
+}
 /* after presentation
   -Services area
 */
@@ -322,7 +331,15 @@ header img {
     color: #ffff;
 }
 
-
+/* header */
+@media (max-width: 768px) {
+    .nav-bar {
+        display: none;
+    }
+    #hamburger-menu {
+        display: block;
+    }
+}
 /* Media query of tablet and cellphone */
 @media (max-width:688px) {
     .presentation {
