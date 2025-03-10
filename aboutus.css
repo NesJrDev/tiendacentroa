@@ -102,8 +102,29 @@ header img {
 /* Portada */
 .picturePortada {
     width: 100%;
-    background-color: rgb(166, 166, 166);
-    height: 550px;
+    background-image: url('resources/banner-market02.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+}
+.pordata {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pordata div {
+    width: 2300px;
+    color: #fff;
+    font-size: 20px;
+}
+.pordata div h1 {
+    width: 100%;
+    max-width: 700px;
 }
 
 /* textContainer */
@@ -250,4 +271,30 @@ header img {
     flex-direction: column;
     margin-top: 20px;
     color: #ffff;
+}
+
+
+/* Header media */
+@media (max-width:689px) {
+    header img {
+        height: 40px;
+        margin-left: 10px;
+    }
+}
+/* Footer media */
+
+@media (max-width:690px) {
+    .direction {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .informacion {
+        width: 100%;
+        margin: 0;
+        padding: 20px 0 0 6px;
+    }
+    .textandlogo img {
+        height: fit-content;
+    }
 }

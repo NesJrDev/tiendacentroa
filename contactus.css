@@ -276,3 +276,29 @@ header img {
     margin-top: 20px;
     color: #ffff;
 }
+
+
+/* Header media */
+@media (max-width:689px) {
+    header img {
+        height: 40px;
+        margin-left: 10px;
+    }
+}
+/* Footer media */
+
+@media (max-width:690px) {
+    .direction {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .informacion {
+        width: 100%;
+        margin: 0;
+        padding: 20px 0 0 6px;
+    }
+    .textandlogo img {
+        height: fit-content;
+    }
+}
