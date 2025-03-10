@@ -43,7 +43,7 @@ header img {
     text-decoration: none;
 }
 .presentation {
-    background-image: url('..resources/banner-market01.jpg');
+    background-image: url('resources/banner-market01.jpg');
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
