@@ -48,7 +48,7 @@
 </body>
 <!-- FOOTER PART EXPORTED-->
 <script>
-    fetch('/footer.html')
+    fetch('footer.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('footerComplete').innerHTML = data;
@@ -57,7 +57,7 @@
 </script>
     <!-- HEADER PART EXPORTED-->
     <script>
-        fetch('/header.html')
+        fetch('header.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header-container').innerHTML = data;
