@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="about.css">
+    <title>About Us</title>
+    <link rel="stylesheet" href="aboutus.css">
+</head>
+<body>
+    <div id="header-container"></div>
+    <div class="espaciomenu"></div>
+    <div class="spaceAfMenu">
+        <div class="spacetext">
+            <p>Inicio / Sobre Nosotros</p>
+            <h1>SOBRE NOSOTROS</h1>
+        </div>
+    </div>
+    <div class="picturePortada"></div>
+    <div class="text">
+        <div class="textContainer">
+            <h1>Historia</h1>
+            <h3>El Sabor de un Sueño:</h3>
+            <p>Nuestra Historia En 2005, La Familia Corvera llegaron a Estados Unidos con una maleta llena de sueños y el corazón rebosante de esperanza. Dejaron atrás su querida tierra natal, El Salvador, junto con sus tradiciones y los inconfundibles aromas de la cocina que marcó su infancia. Sin embargo, jamás dejaron atrás su esencia. Como muchos inmigrantes, enfrentaron noches de incertidumbre, jornadas laborales extenuantes y el temor constante de no saber si lograrían salir adelante. </p>
+            <p>En esos momentos difíciles, cuando la nostalgia se hacía más fuerte, surgió una idea: crear un rincón donde la comunidad Latinoamericana en especial centroamericana pudiera sentirse en casa, donde el sabor de su tierra los abrazara con cada plato y donde los ingredientes de su cocina les recordaran de dónde vienen. Un restaurante y un supermercado no solo para vender comida, sino para alimentar el alma. </p>
+            <p>Cada paso fue una batalla. Empezaron con poco, trabajando sin descanso, sacrificando momentos en familia para construir un futuro mejor. Hubo días en los que parecía que todo se derrumbaba, pero su amor por su gente y sus raíces los sostuvo. La comunidad y su familia se convirtió en su fuerza, en su razón para seguir adelante. Y así, con trabajo incansable, esfuerzo y fe, lograron no solo levantar un negocio, sino un hogar para todos los que añoran el calor de Centroamérica.</p>
+            <p>Hoy, su restaurante y supermercado son más que un lugar donde se encuentran ingredientes auténticos y platillos tradicionales; son el reflejo de un sueño convertido en realidad. Cada cliente que cruza nuestras puertas es parte de esta historia, porque aquí no solo servimos comida, servimos recuerdos, unión y el sabor inconfundible de nuestra tierra.</p>
+            <strong><p>Bienvenidos a nuestro rincón centroamericano, donde la tradición, la familia y el trabajo duro son los ingredientes principales.</p></strong>
+        </div>
+    </div>
+    <footer>
+        <div id="footerComplete"></div>
+    </footer>
+</body>
+<!-- FOOTER PART EXPORTED-->
+<script>
+    fetch('/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footerComplete').innerHTML = data;
+        })
+        .catch(error => document.getElementById('footerComplete').innerHTML = 'Loading');
+</script>
+    <!-- HEADER PART EXPORTED-->
+    <script>
+        fetch('/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+                
+                // Ahora que el contenido del header se ha cargado, agrega el event listener
+                const hamburgerMenu = document.querySelector('#hamburger-menu');
+                const menucell = document.querySelector('.cellphoneNav-bar');
+                hamburgerMenu.addEventListener("click", function() {
+                    menucell.classList.toggle("active");
+                    if (menucell.classList.contains("active")) {
+                        menucell.style.display = "flex";
+                        menucell.style.top = "70px";
+                        menucell.style.transition = "top 0.5s ease-in-out";
+                    } else {
+                        menucell.style.display = "none";
+                    }
+                });
+            })
+            .catch(error => document.getElementById('header-container').innerHTML = 'Loading');
+    </script>
+<script src="/elements/header.js"></script>
+</html>

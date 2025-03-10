@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tienda Centroamericana</title>
+</head>
+<body>
+    <div id="header-container"></div>
+    <main>
+        <div class="presentation">
+            <div class="text">
+                <div>
+                    <h1>"Come, compra y disfruta"</h1>
+                <p>En nuestro restaurante y supermercado, te acercamos a tus raíces con cada bocado y cada compra.</p>
+                </div>
+            </div>
+        </div>
+        <div class="services">
+            <div class="service">
+                <img src="resources/vegetales01.jpg" alt="">
+                <h2>Restaurante</h2>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+            </div>
+            <div class="service">
+                <img src="resources/ban-gallo.jpg" alt="">
+                <h2>Supermercado</h2>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+            </div>
+            <div class="service">
+                <img src="resources/TiendaCA-04.jpg" alt="">
+                <h2>Restaurante</h2>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+            </div>
+            </div>
+            <div class="liladd">
+                <img src="resources/vegetables.png" alt="">
+                <div class="liladdtext">
+                    <h1>La comida trae gente que disfruta</h1>
+                    <p>Ven a encontrar lo que necesitas en tu hogar en un solo lugar</p>
+                    <button>Entrar</button>
+                </div>
+            </div>
+
+            <div class="clients">
+                <div class="textPresentation">
+                    <p>NOSOTROS AMAMOS A NUESTROS CLIENTES</p>
+                    <h1>Que es lo que nuestros clientes dicen</h1>
+                </div>
+                <div class="clientsAreA">
+                    <div class="client">
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+                        <img src="resources/sirclient.png" alt="">
+                        <p>John Peter</p>
+                    </div>
+                    <div class="client">
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+                        <img src="resources/sirclient.png" alt="">
+                        <p>John Peter</p>
+                    </div>
+                    <div class="client">
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+                        <img src="resources/sirclient.png" alt="">
+                        <p>John Peter</p>
+                    </div>
+                </div>
+            </div>
+    </main>
+</body>
+<footer>
+    <div id="footerComplete"></div>
+</footer>
+
+<script>
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footerComplete').innerHTML = data;
+        })
+        .catch(error => document.getElementById('footerComplete').innerHTML = 'Loading');
+</script>
+<script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-container').innerHTML = data;
+            
+            // Ahora que el contenido del header se ha cargado, agrega el event listener
+            const hamburgerMenu = document.querySelector('#hamburger-menu');
+            const menucell = document.querySelector('.cellphoneNav-bar');
+            hamburgerMenu.addEventListener("click", function() {
+                menucell.classList.toggle("active");
+                if (menucell.classList.contains("active")) {
+                    menucell.style.display = "flex";
+                    menucell.style.top = "70px";
+                    menucell.style.transition = "top 0.5s ease-in-out";
+                } else {
+                    menucell.style.display = "none";
+                }
+            });
+        })
+        .catch(error => document.getElementById('header-container').innerHTML = 'Loading');
+</script>
+
+<script src="/elements/header.js"></script>
+<script>
+
+</script>
+</html>
