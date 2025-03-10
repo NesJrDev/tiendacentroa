@@ -63,12 +63,12 @@ header img {
     margin-bottom: 29px;
 }
 .presentation .text div {
-    width: 100%;
+    width: 90%;
     max-width: 1900px;
     font-size: 26px;
 }
 .presentation .text div p {
-    width: 100%;
+    width: 50%;
     max-width: 675px;
     font-size: 22px;
 }
@@ -116,7 +116,8 @@ header img {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    height: 570px;
+    flex-wrap: wrap;
+    height: auto;
     background-color: #EAE4D5;
 }
 .liladd img {
@@ -129,7 +130,8 @@ header img {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-left: 60px;
+
+    padding: 30px 0 75px 0;
     text-align: center;
 }
 .liladdtext h1 {
@@ -257,8 +259,10 @@ header img {
     margin: 8px 0 8px 0;
 }
 .textandlogo img {
-    width: 520px;
-    height: 200px;
+    max-width: 440px;
+    width: 80%;
+    height: 160px;
+    margin: 45px 0 25px 0;
 }
 /* lil icons */
 .socialmediaicons {
@@ -301,4 +305,88 @@ header img {
     flex-direction: column;
     margin-top: 20px;
     color: #ffff;
+}
+
+
+/* Media query of tablet and cellphone */
+@media (max-width:688px) {
+    .presentation {
+        background-size: 230% 100%;
+        height: 400px;
+        background-position: left;
+    }
+    .presentation .text div {
+        font-size: 13px;
+    }
+    .presentation .text div p {
+        font-size: 15px;
+    }
+
+    /* Second part */
+    .service img {
+        width: 100%;
+        height: fit-content;
+    }
+    /* 3rd part */
+    .liladd img {
+        width: 90%;
+        height: fit-content;
+    }
+    .liladdtext {
+        width: 92%;
+    }
+    .liladdtext h1 {
+        font-size: 35px;
+    }   
+    .liladdtext p {
+        font-size: 20px;
+    } 
+    .liladd button {
+        padding: 10px 46px;
+        font-size: 14px;
+    }
+    /* 4th part */
+    .textPresentation {
+        padding: 0 5px 0 5px;
+    }
+    .textPresentation p {
+        font-size: 15px;
+        text-align: center;
+    }
+    .textPresentation h1 {
+        font-size: 22px;
+        text-align: center;
+    }
+    .clientsAreA {
+        flex-direction: column;
+    }
+    .client {
+        width: 60%;
+        margin: 20px 0 20px 0;
+    }
+
+}
+/* Header media */
+@media (max-width:689px) {
+    header img {
+        height: 40px;
+        margin-left: 10px;
+    }
+}
+/* Footer media */
+
+@media (max-width:690px) {
+    .direction {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .informacion {
+        width: 100%;
+        margin: 0;
+        padding: 20px 0 0 6px;
+    }
+    .textandlogo img {
+        height: fit-content;
+    }
 }

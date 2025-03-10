@@ -45,13 +45,13 @@ header img {
     text-decoration: none;
 }
 .presentation {
-    background-image: url('../homepage/resources/website-portada.png');
-    background-position: center;
+    background-image: url('resources/banner-market01.jpg');
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 580px; /* Asegura que cubra toda la ventana */
-    margin: 0; /* Elimina márgenes adicionales */
-    padding: 0; /* Elimina relleno adicional */
+    height: 720px;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: start;
     align-items: end;
@@ -204,8 +204,10 @@ header img {
     margin: 8px 0 8px 0;
 }
 .textandlogo img {
-    width: 520px;
-    height: 200px;
+    max-width: 440px;
+    width: 80%;
+    height: 160px;
+    margin: 45px 0 25px 0;
 }
 /* lil icons */
 .socialmediaicons {
