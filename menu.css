@@ -282,6 +282,9 @@ header img {
     .insidetextbanner {
         align-items: end;
     }
+    .abbiftcts {
+        background-position: center;
+    }
     
 }
 @media (max-width: 768px) {
