@@ -161,6 +161,41 @@ header img {
 .foodinfo p {
     font-size: 18px;
 }
+.banner {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.abbiftcts {
+    width: 1339px;
+    height: 480px;
+    background-image: url('resources/banner-market04.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.textbanner {
+    width: 100%;
+}
+.insidetextbanner {
+    width: 90%;
+    max-width: 970px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 90px;
+}
+.insidetextbanner h1 {
+    font-size: 50px;
+    font-weight: bold;
+    font-size: 40px;
+    font-family: "Caveat", cursive;
+    font-weight: bold;
+}
 /* Footer images and all */
 
 .servicesF {
@@ -242,6 +277,12 @@ header img {
 }
 .lilicons img{
     width: 100px;
+}
+@media (max-width: 1000px) {
+    .insidetextbanner {
+        align-items: end;
+    }
+    
 }
 @media (max-width: 768px) {
     .socialmediaicons {
